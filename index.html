@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <title>Boda de Cami y Juan</title>
     <style>
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('CormorantGaramond-MediumItalic.ttf') format('truetype'), /* Modern browsers */
+                url('CormorantGaramond-SemiBoldItalic.ttf') format('truetype'), /* Older browsers */
+                url('CormorantGaramond-Regular.ttf') format('truetype'); /* Legacy browsers */
+            font-weight: normal;
+            font-style: normal;
+        }
         .container-title {
             display: flex;
             width: 60%;
@@ -18,7 +26,7 @@
         }
 
         .font-garamond{
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant Garamond';
         }
         .center {
             align-self: center;
