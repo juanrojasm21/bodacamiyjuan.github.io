@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Wedding Invitation</title>
+    <style>
+        .container-title {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            align-items: flex-start;
+            /* Alinea al inicio (izquierda) por defecto */
+        }
+
+        .font-garamond{
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .center {
+            align-self: center;
+            /* Centra solo este elemento */
+            font-size: 50px;
+        }
+
+        .right {
+            align-self: flex-end;
+            /* Alinea al final (derecha) */
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-style: italic;
+            color: #cda56d;
+            font-size: 70px;
+            font-weight: 400;
+            margin: 5px 0;
+            /* Margen más pequeño entre los h1 */
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .date,
+        .time,
+        .location {
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .date span,
+        .time span,
+        .location span {
+            font-size: 24px;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .and {
+            font-size: 24px;
+            margin: 40px 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .gold {
+            color: #b5a264;
+            font-size: 20px;
+        }
+
+        .floral {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        body {
+            display: flex;
+            background-color: #f9f3e9;
+            flex-direction: column;
+            color: #645e52;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin-bottom: 20px;
+            display: flex;
+            /* Habilita flexbox */
+            flex-direction: column;
+            /* Alinea los hijos en una columna */
+            justify-content: center;
+            /* Centra los hijos verticalmente */
+            align-items: center;
+            /* Centra los hijos horizontalmente */
+            width: 524px;
+            /* Ajustado al ancho de la imagen de fondo */
+            height: 750px;
+            /* Ajustado al alto de la imagen de fondo */
+            background-image: url('fondo.jpeg');
+            /* Asegúrate de que la ruta a la imagen sea correcta */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 60px;
+            /* Puedes ajustar o eliminar el padding según tus necesidades */
+        }
+
+        .date {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            /* Alinea los elementos por la línea base del texto */
+        }
+
+        .date .month,
+        .date .year {
+            font-size: 24px;
+            /* Tamaño más pequeño para el mes y el año */
+            color: #b5a264;
+            /* Color dorado */
+            font-weight: 400;
+            /* Peso normal */
+        }
+
+        .date .day {
+            font-size: 48px;
+            /* Tamaño más grande para el día */
+            color: #b5a264;
+            /* Color dorado */
+            font-weight: 700;
+            /* Negrita */
+            margin: 0 10px;
+            /* Espacio alrededor del día */
+        }
+
+        .date .separator {
+            font-size: 30px;
+            /* Tamaño para que coincida con el del día */
+            color: #b5a264;
+            /* Color dorado */
+            font-weight: 400;
+            /* Negrita */
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .ubication {
+            font-size: 20px;
+        }
+
+        .view-ubication {
+            background-color: #ddd4d4;
+            /* Fondo tenue usando RGBA para transparencia */
+            color: #645e52;
+            /* Cambia el color de texto según tu diseño */
+            border-radius: 15px;
+            /* Bordes redondeados */
+            padding: 10px 20px;
+            /* Espacio interior alrededor del texto */
+            font-size: 20px;
+            /* Tamaño de fuente del texto */
+            cursor: pointer;
+            /* Cambia el cursor a una mano cuando se pasa por encima */
+            transition: background-color 0.3s ease;
+            /* Transición suave para el fondo */
+            text-decoration: none;
+            /* Elimina la subraya del texto */
+            display: inline-block;
+            /* Permite aplicar padding y bordes correctamente */
+            margin: 5px 0;
+            /* Espacio alrededor del botón */
+            text-align: center;
+            /* Asegura que el texto esté centrado */
+        }
+
+        .icons {
+            filter: invert(43%) sepia(25%) saturate(1357%) hue-rotate(2deg) brightness(92%) contrast(89%);
+            width: 80px;
+            height: 80px;
+        }
+
+        .icons-2 {
+            filter: invert(43%) sepia(25%) saturate(1357%) hue-rotate(2deg) brightness(92%) contrast(89%);
+            width: 70px;
+            height: 70px;
+        }
+
+        .play-pause-btn {
+            background-color: #fff;
+            border: 2px solid #cda56d;
+            /* Borde del botón */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+        }
+
+        .play-icon {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cda56d" viewBox="0 0 16 16"><path d="M11.596 8.304L6 12.407V4.201l5.596 4.103z"/></svg>');
+            /* SVG para el ícono de play */
+            width: 70px;
+            /* Ajusta el tamaño según sea necesario */
+            height: 70px;
+            /* Ajusta el tamaño según sea necesario */
+        }
+
+        .pause-icon {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cda56d" viewBox="0 0 16 16"><path d="M5.5 3.5A.5.5 0 0 1 6 3h1a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-9zM9 3.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-9z"/></svg>');
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+        /* Media query para dispositivos móviles */
+        @media (max-width: 430px) {
+            .container {
+                background-image: url('fondo2.jpeg');
+                /* Imagen optimizada para móviles */
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-title">
+            <h1>Camila</h1>
+            <h1 class="center" style='margin-bottom: -30px;'>&</h1>
+            <h1 class="right">Juan</h1>
+        </div>
+        <p class="gold font-garamond" style = 'font-size: 25px; line-height: 0.5; margin-bottom: 0px;'>¡Siempre supimos que este día llegaría!</p>
+        <p class="gold font-garamond" style='width : 300px; font-size: 25px; line-height: 1;'>Acompáñanos a disfrutar uno de los días más importantes de nuestra vida.
+        </p>
+        <div class="date">
+            <div class="month gold">Mar</div>
+            <div class="separator"> |</div>
+            <div class="day">24</div>
+            <div class="separator"> |</div>
+            <div class="year gold">2024</div>
+        </div>
+        <div class="time">
+            <span style='margin-top: -20px;'>Domingo</span>
+            <span class="gold">a las 4 PM</span>
+        </div>
+        <audio id="background-music" loop>
+            <source src="tu refugio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="play-pause-btn" class="play-pause-btn" onclick="togglePlayPause()">
+            <span id="play-icon" class="icon play-icon"></span>
+            <span id="pause-icon" class="icon pause-icon hidden"></span>
+        </button>
+    </div>
+
+    <div class="container">
+        <div style='margin-top: 70px; margin-bottom: 30px;'>
+            <span class="ubication">CEREMONIA Y RECEPCIÓN</span>
+            <p class="gold" style='margin-top : -5px;'>Con tu amor - Casa campestre</p>
+            <a href="https://maps.app.goo.gl/yJUGCVggFxdjoUPm6" class='view-ubication'>Ver ubicación</a>
+        </div>
+        <img src="dress-code.png" alt="Dress Code" class="icons">
+        <span class="ubication">CÓDIGO DE VESTIMENTA</span>
+        <p class="gold" style='width : 300px;margin-top:0px;'><strong>FORMAL</strong>
+        </p>
+        <p class="gold" style='width : 230px; margin-top:-25px; line-height: 1.2;'>Se reserva el color blanco para la
+            novia
+        </p>
+        <div style='margin-top: 10px;'>
+            <a href="https://pin.it/5R4KwQW" class='view-ubication' style='margin-top: -20px;'>Ver ideas</a>
+        </div>
+        <img src="gift.png" alt="Gift" class="icons-2" style='margin-top: 50px;'>
+        <br>
+        <span class="ubication">LLUVIA DE SOBRES</span>
+        </p>
+    </div>
+
+    <div class="container">
+        
+        <div style = 'margin-top: 20px;'>
+            <span class="ubication">CONFIRMACIÓN</span>
+            <p class="gold" style="width: 300px; line-height: 1.2;">
+                Por favor confirma tu asistencia antes del 15 de febrero de 2024
+            </p>
+            <div style='margin-top: 10px;'>
+                <a href="https://forms.gle/29cJPvp3yJLmV61r5" class='view-ubication'>Confirmar aquí</a>
+            </div>
+        </div>
+        <div style='margin-top: 70px; margin-bottom: 30px;'>
+            <p class="gold" style='width : 300px; line-height: 1.2;'>¿ Qué canciones crees que serían infaltables ?
+            </p>
+            <a href="https://open.spotify.com/playlist/4KFxsO69yyNZtn0YcvfyR3?si=qfiBY2FcQIK4xfoQ56crrA&pi=u-w-XdUQGTT5uq&pt=c5f3ab66df5e1085fd0bd59ed6e73b91" class='view-ubication'>Añádela a Spotify</a>
+        </div>
+    </div>
+
+
+    <script>
+        var music = document.getElementById('background-music');
+        var playIcon = document.getElementById('play-icon');
+        var pauseIcon = document.getElementById('pause-icon');
+
+        function togglePlayPause() {
+            if (music.paused || music.ended) {
+                music.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            } else {
+                music.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+
+</html>
