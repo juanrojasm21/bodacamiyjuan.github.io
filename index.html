@@ -41,9 +41,13 @@
 
         .right {
             align-self: flex-end;
+            margin-right: 0.7em;
             /* Alinea al final (derecha) */
         }
 
+        .left {
+            align-self: flex-start;
+        }
         h1 {
             font-family: 'Great Vibes', cursive;
             font-style: italic;
@@ -82,7 +86,7 @@
         }
 
         .gold {
-            color: #b5a264;
+            color: #6c6766;
             font-size: 20px;
         }
 
@@ -143,7 +147,7 @@
         .date .year {
             font-size: 24px;
             /* Tamaño más pequeño para el mes y el año */
-            color: #b5a264;
+            color: #cda56d;
             /* Color dorado */
             font-weight: 400;
             /* Peso normal */
@@ -152,7 +156,7 @@
         .date .day {
             font-size: 48px;
             /* Tamaño más grande para el día */
-            color: #b5a264;
+            color: #cda56d;
             /* Color dorado */
             font-weight: 700;
             /* Negrita */
@@ -163,7 +167,7 @@
         .date .separator {
             font-size: 30px;
             /* Tamaño para que coincida con el del día */
-            color: #b5a264;
+            color: #cda56d;
             /* Color dorado */
             font-weight: 400;
             /* Negrita */
@@ -217,8 +221,8 @@
             border: 2px solid #cda56d;
             /* Borde del botón */
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             cursor: pointer;
             outline: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -237,12 +241,9 @@
         }
 
         .play-icon {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cda56d" viewBox="0 0 16 16"><path d="M11.596 8.304L6 12.407V4.201l5.596 4.103z"/></svg>');
-            /* SVG para el ícono de play */
-            width: 70px;
-            /* Ajusta el tamaño según sea necesario */
-            height: 70px;
-            /* Ajusta el tamaño según sea necesario */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cda56d" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>');
+            width: 25px;
+            height: 25px;
         }
 
         .pause-icon {
@@ -276,11 +277,11 @@
 <body>
     <div class="container">
         <div class="container-title">
-            <h1>Camila</h1>
+            <h1 class = "left" style='margin-bottom: -30px;'>Camila</h1>
             <h1 class="center" style='margin-bottom: -30px;'>&</h1>
             <h1 class="right">Juan</h1>
         </div>
-        <p class="gold font-garamond" style='font-size: 25px; line-height: 0.5; margin-bottom: 0px;'>¡Siempre supimos
+        <p class="gold font-garamond" style='font-size: 25px; line-height: 0.5; margin-bottom: 0px; margin-top: 2em;'>¡Siempre supimos
             que este día llegaría!</p>
         <p class="gold font-garamond" style='width : 300px; font-size: 25px; line-height: 1;'>Acompáñanos a disfrutar
             uno de los días más importantes de nuestra vida.
@@ -294,7 +295,7 @@
         </div>
         <div class="time">
             <span style='margin-top: -20px;'>Domingo</span>
-            <span class="gold">a las 4 PM</span>
+            <span class="gold">4:30 PM</span>
         </div>
         <audio id="background-music" loop>
             <source src="tu refugio.mp3" type="audio/mpeg">
@@ -325,6 +326,8 @@
         <img src="gift.png" alt="Gift" class="icons-2" style='margin-top: 50px;'>
         <br>
         <span class="ubication">LLUVIA DE SOBRES</span>
+        <span class="ubication">o el obsequio</span>
+        <span class="ubication">que desees</span>
         </p>
     </div>
 
@@ -332,13 +335,13 @@
         <img src="invitation.png" alt="Invitation" class="icons" style="margin-top:40px;">
         <span class="ubication">CONFIRMACIÓN</span>
         <p class="gold" style="width: 300px; line-height: 1.2;">
-            Por favor confirma tu asistencia antes del 15 de febrero de 2024
+            Por favor confirma tu asistencia antes del 01 de febrero de 2024
         </p>
         <div style='margin-top: 10px;'>
             <a href="https://forms.gle/29cJPvp3yJLmV61r5" class='view-ubication'>Confirmar aquí</a>
         </div>
         <img src="music.png" alt="Music" class="icons-2" style="margin-top:40px;">
-        <p class="gold" style='width : 300px; line-height: 1.2;'>¿ Qué canciones crees que serían infaltables ?
+        <p class="gold" style='width : 300px; line-height: 1.2;'>Cuéntanos cuáles canciones serían infaltables
         </p>
         <a href="https://open.spotify.com/playlist/4KFxsO69yyNZtn0YcvfyR3?si=qfiBY2FcQIK4xfoQ56crrA&pi=u-w-XdUQGTT5uq&pt=c5f3ab66df5e1085fd0bd59ed6e73b91"
             class='view-ubication'>Añádela a Spotify</a>
